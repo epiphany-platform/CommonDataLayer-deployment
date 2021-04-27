@@ -1,0 +1,61 @@
+name: test baremetal deployment
+
+on:
+  push:
+    branches:
+      - "develop"
+  pull_request:
+
+
+jobs:
+  component-testing:
+    name: Test modules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: filepath1
+        run: |
+          pwd
+
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          clean: true
+          submodules: true
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          profile: minimal
+          override: true
+          components: clippy, rustfmt
+
+      - name: Start environment via docker-compose
+        run: docker-compose -f compose/docker-compose.yml up -d postgres kafka
+
+      - name: filepath1
+        run: |
+          pwd
+
+      - name: Build cdl
+        run: |
+          cd cdl
+          pwd
+          cargo build
+
+      - name: filepath1
+        run: |
+          pwd
+
+      - name: install horust
+        run: |
+          cargo install horust
+
+      - name: test basic cdl setup
+        run: |
+          horust --services-path bare/horust/kafka/base --services-path bare/horust/kafka/postgres &
+          sleep 30
+          if ! $(ps aux | grep horust); then exit -1 ; fi
+          pkill --signal SIGTERM horust
+

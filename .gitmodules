@@ -1,0 +1,4 @@
+[submodule "cdl"]
+	path = cdl
+	url = git@github.com:epiphany-platform/CommonDataLayer.git
+	branch = devel
