@@ -20,16 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-COMMUNICATION_METHOD = "kafka"
-KAFKA_BROKERS        = "localhost:9092"
-KAFKA_GROUP_ID       = "data_router"
-INPUT_SOURCE         = "cdl.data.input"
-SCHEMA_REGISTRY_ADDR = "http://localhost:50101"
-CACHE_CAPACITY       = "1000"
-RUST_LOG             = "info,data_router=trace"
-OTEL_SERVICE_NAME    = "data-router"
-METRICS_PORT         = "0" # Random
-STATUS_PORT          = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

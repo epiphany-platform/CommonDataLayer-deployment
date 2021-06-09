@@ -20,16 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-SCHEMA_REGISTRY_ADDR = "http://localhost:50101"
-KAFKA_BROKERS        = "localhost:9092"
-KAFKA_GROUP_ID       = "partial_update_engine"
-NOTIFICATION_TOPIC   = "cdl.reports"
-OBJECT_BUILDER_TOPIC = "cdl.materialize"
-SLEEP_PHASE_LENGTH   = "1"
-RUST_LOG             = "info,partial_update_engine=trace"
-OTEL_SERVICE_NAME    = "partial-update-engine"
-METRICS_PORT         = "0" # Random
-STATUS_PORT          = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

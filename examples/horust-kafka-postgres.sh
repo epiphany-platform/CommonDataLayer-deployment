@@ -35,7 +35,6 @@ export TARGET="release"
 fi
 
 export HORUST_LOG="info"
-
 horust \
     --services-path ./bare/horust/kafka/base \
     --services-path ./bare/horust/kafka/postgres

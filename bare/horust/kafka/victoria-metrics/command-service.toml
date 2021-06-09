@@ -19,19 +19,6 @@ strategy = "ignore"
 keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
-[environment.additional]
-COMMUNICATION_METHOD        = "kafka"
-KAFKA_GROUP_ID              = "victoria_command"
-KAFKA_BROKERS               = "localhost:9092"
-ORDERED_SOURCES             = "cdl.timeseries.vm.1.data"
-UNORDERED_SOURCES           = "cdl.timeseries.vm.2.data"
-VICTORIA_METRICS_OUTPUT_URL = "http://localhost:8428"
-REPORT_DESTINATION          = "cdl.reports"
-RUST_LOG                    = "info,command_service=trace"
-OTEL_SERVICE_NAME           = "victoria-metrics-command"
-METRICS_PORT                = "0" # Random
-STATUS_PORT                 = "0" # Random
-
 [termination]
 signal = "TERM"
 wait = "2s"

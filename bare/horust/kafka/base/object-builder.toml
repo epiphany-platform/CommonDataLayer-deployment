@@ -20,17 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-MQ_METHOD                       = "kafka"
-INPUT_PORT                      = "50107"
-KAFKA_BROKERS                   = "localhost:9092"
-KAFKA_GROUP_ID                  = "object_builder"
-MQ_SOURCE                       = "cdl.materialize"
-SCHEMA_REGISTRY_ADDR            = "http://localhost:50101"
-RUST_LOG                        = "info,object_builder=trace"
-OTEL_SERVICE_NAME               = "object-builder"
-CHUNK_CAPACITY                  = "1000"
-METRICS_PORT                    = "0" # Random
-STATUS_PORT                     = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

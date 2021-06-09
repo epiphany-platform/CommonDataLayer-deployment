@@ -20,20 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-INPUT_PORT                  = "50106"
-RUST_LOG                    = "info,api=trace"
-SCHEMA_REGISTRY_ADDR        = "http://localhost:50101"
-EDGE_REGISTRY_ADDR          = "http://localhost:50110"
-ON_DEMAND_MATERIALIZER_ADDR = "http://localhost:50108"
-QUERY_ROUTER_ADDR           = "http://localhost:50103"
-COMMUNICATION_METHOD        = "kafka"
-KAFKA_BROKERS               = "localhost:9092"
-KAFKA_GROUP_ID              = "cdl-api"
-REPORT_SOURCE               = "cdl.reports"
-INSERT_DESTINATION          = "cdl.data.input"
-OTEL_SERVICE_NAME           = "api"
-METRICS_PORT                = "0" # Random
-STATUS_PORT                 = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

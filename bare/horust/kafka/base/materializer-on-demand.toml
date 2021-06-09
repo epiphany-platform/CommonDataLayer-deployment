@@ -20,12 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-INPUT_PORT                      = "50108"
-OBJECT_BUILDER_ADDR             = "http://localhost:50107"
-RUST_LOG                        = "info,materializer_ondemand=trace"
-OTEL_SERVICE_NAME               = "materializer-ondemand"
-METRICS_PORT                    = "0" # Random
-STATUS_PORT                     = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

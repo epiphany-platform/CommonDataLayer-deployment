@@ -35,6 +35,7 @@ docker-compose -f compose/docker-compose.yml up -d postgres kafka
 ### Start Deployment
 
 ```
+export CDL_CONFIG="cdl/.cdl"
 horust --services-path bare/horust/kafka/base --services-path bare/horust/kafka/postgres &
 ```
 

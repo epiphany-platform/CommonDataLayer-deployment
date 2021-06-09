@@ -20,21 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-POSTGRES_USERNAME = "postgres"
-POSTGRES_PASSWORD = "1234"
-POSTGRES_HOST     = "localhost"
-POSTGRES_PORT     = "5432"
-POSTGRES_DBNAME   = "postgres"
-POSTGRES_SCHEMA   = "cdl"
-RPC_PORT          = "50110"
-CONSUMER_METHOD   = "kafka"
-CONSUMER_HOST     = "localhost:9092"
-CONSUMER_TAG      = "edge-registry"
-CONSUMER_SOURCE   = "cdl.edge.input"
-RUST_LOG          = "info,edge_registry=trace"
-OTEL_SERVICE_NAME = "edge-registry"
-METRICS_PORT      = "0" # Random
-STATUS_PORT       = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

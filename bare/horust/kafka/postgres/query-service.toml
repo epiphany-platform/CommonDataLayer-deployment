@@ -20,17 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-POSTGRES_USERNAME = "postgres"
-POSTGRES_PASSWORD = "1234"
-POSTGRES_HOST     = "localhost"
-POSTGRES_PORT     = "5432"
-POSTGRES_DBNAME   = "postgres"
-POSTGRES_SCHEMA   = "cdl"
-INPUT_PORT        = "50201"
-RUST_LOG          = "info,query_service=trace"
-OTEL_SERVICE_NAME = "postgres-query"
-METRICS_PORT      = "0" # Random
-STATUS_PORT       = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

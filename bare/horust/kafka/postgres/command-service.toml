@@ -20,22 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-COMMUNICATION_METHOD = "kafka"
-KAFKA_GROUP_ID       = "postgres_command"
-KAFKA_BROKERS        = "localhost:9092"
-ORDERED_SOURCES      = "cdl.document.1.data"
-UNORDERED_SOURCES    = "cdl.document.2.data"
-POSTGRES_USERNAME    = "postgres"
-POSTGRES_PASSWORD    = "1234"
-POSTGRES_HOST        = "localhost"
-POSTGRES_PORT        = "5432"
-POSTGRES_DBNAME      = "postgres"
-POSTGRES_SCHEMA      = "cdl"
-REPORT_DESTINATION   = "cdl.reports"
-RUST_LOG             = "info,command_service=trace"
-OTEL_SERVICE_NAME    = "postgres-command"
-METRICS_PORT         = "0" # Random
-STATUS_PORT          = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

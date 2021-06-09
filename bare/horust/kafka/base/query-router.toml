@@ -20,13 +20,8 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-CACHE_CAPACITY       = "1024"
-INPUT_PORT           = "50103"
-SCHEMA_REGISTRY_ADDR = "http://localhost:50101"
-RUST_LOG             = "info,query_router=trace"
-OTEL_SERVICE_NAME    = "query-router"
-METRICS_PORT         = "0" # Random
-STATUS_PORT          = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
 
 [termination]
 signal = "TERM"

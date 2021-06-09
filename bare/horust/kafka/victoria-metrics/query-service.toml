@@ -19,14 +19,6 @@ strategy = "ignore"
 keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
-[environment.additional]
-INPUT_PORT         = "50203"
-VICTORIA_QUERY_URL = "http://localhost:8428/api/v1"
-RUST_LOG           = "info,query_service=trace"
-OTEL_SERVICE_NAME  = "victoria-metrics-query"
-METRICS_PORT       = "0" # Random
-STATUS_PORT        = "0" # Random
-
 [termination]
 signal = "TERM"
 wait = "2s"

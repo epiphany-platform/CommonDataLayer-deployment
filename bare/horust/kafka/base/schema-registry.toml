@@ -20,21 +20,9 @@ keep-env = false
 #re-export = [ "PATH", "DB_PASS"]
 
 [environment.additional]
-COMMUNICATION_METHOD = "kafka"
-KAFKA_BROKERS        = "localhost:9092"
-KAFKA_GROUP_ID       = "schema_registry"
-INPUT_PORT           = "50101"
-POSTGRES_USERNAME    = "postgres"
-POSTGRES_PASSWORD    = "1234"
-POSTGRES_HOST        = "localhost"
-POSTGRES_PORT        = "5432"
-POSTGRES_DBNAME      = "postgres"
-POSTGRES_SCHEMA      = "cdl"
-IMPORT_FILE          = "./bare/setup/schema-registry/initial-schema.kafka.json"
-RUST_LOG             = "info,schema_registry=trace"
-OTEL_SERVICE_NAME    = "schema-registry"
-METRICS_PORT         = "0" # Random
-STATUS_PORT          = "0" # Random
+CDL_CONFIG = "cdl/.cdl"
+ENVIRONMENT = "development"
+SCHEMA_REGISTRY_IMPORT_FILE="./bare/setup/schema-registry/initial-schema.kafka.json"
 
 [termination]
 signal = "TERM"
